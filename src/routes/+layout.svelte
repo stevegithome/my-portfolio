@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import './layout.css';
 	import { portfolio } from '$lib/content/portfolio';
 	import { buildSiteMetadata, buildStructuredData } from '$lib/seo';
@@ -6,6 +7,7 @@
 	let { children } = $props();
 	const metadata = buildSiteMetadata(portfolio);
 	const structuredData = JSON.stringify(buildStructuredData(portfolio));
+	const faviconHref = `${base}/favicon.svg`;
 </script>
 
 <svelte:head>
@@ -16,7 +18,7 @@
 	<meta name="author" content={portfolio.site.name} />
 	<meta name="theme-color" content="#f3ede5" />
 	<link rel="canonical" href={metadata.canonical} />
-	<link rel="icon" href="/favicon.svg" />
+	<link rel="icon" href={faviconHref} />
 	<meta property="og:title" content={metadata.title} />
 	<meta property="og:description" content={metadata.description} />
 	<meta property="og:type" content="website" />
