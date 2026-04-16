@@ -1,27 +1,33 @@
 <script lang="ts">
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import { portfolio } from '$lib/content/portfolio';
+	import { buildSiteMetadata, buildStructuredData } from '$lib/seo';
 
 	let { children } = $props();
+	const metadata = buildSiteMetadata(portfolio);
+	const structuredData = JSON.stringify(buildStructuredData(portfolio));
 </script>
 
 <svelte:head>
-	<title>SvelteKit Tailwind Pages Template</title>
-	<meta
-		name="description"
-		content="A reusable SvelteKit, Tailwind CSS, and GitHub Pages starter template for static sites."
-	/>
-	<meta
-		name="keywords"
-		content="SvelteKit, Tailwind CSS, GitHub Pages, static site template"
-	/>
-	<meta property="og:title" content="SvelteKit Tailwind Pages Template" />
-	<meta
-		property="og:description"
-		content="A reusable SvelteKit, Tailwind CSS, and GitHub Pages starter template for static sites."
-	/>
+	<title>{metadata.title}</title>
+	<meta name="description" content={metadata.description} />
+	<meta name="keywords" content={metadata.keywords} />
+	<meta name="robots" content={metadata.robots} />
+	<meta name="author" content={portfolio.site.name} />
+	<meta name="theme-color" content="#f3ede5" />
+	<link rel="canonical" href={metadata.canonical} />
+	<link rel="icon" href="/favicon.svg" />
+	<meta property="og:title" content={metadata.title} />
+	<meta property="og:description" content={metadata.description} />
 	<meta property="og:type" content="website" />
-	<link rel="icon" href={favicon} />
+	<meta property="og:url" content={metadata.canonical} />
+	<meta property="og:image" content={metadata.imageUrl} />
+	<meta property="og:site_name" content={portfolio.site.name} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={metadata.title} />
+	<meta name="twitter:description" content={metadata.description} />
+	<meta name="twitter:image" content={metadata.imageUrl} />
+	<script type="application/ld+json">{structuredData}</script>
 </svelte:head>
 
 {@render children()}

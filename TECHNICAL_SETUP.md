@@ -1,59 +1,58 @@
 # Technical Setup
 
-This repository is a neutral SvelteKit starter built for a simple workshop workflow. Students can create a new repository from the template, open it in VS Code, and work inside a Dev Container on Windows, macOS, or Linux.
+This repository is a static SvelteKit portfolio tuned for clear storytelling, GitHub Pages deployment, and reliable validation in CI.
 
 ## Stack
 
 - Node 22
-- SvelteKit
+- SvelteKit 2
 - Svelte 5
 - `@sveltejs/adapter-static`
 - Tailwind CSS 4
 - GSAP
+- Zod
+- Vitest
+- Playwright
 - Vite
 - npm
 - VS Code Dev Containers
-- Docker Desktop or Docker Engine for local development
 - GitHub Pages deployment through GitHub Actions
 
-## What This Template Is For
+## What This Site Is Optimized For
 
-This template is designed for:
+- static portfolio delivery
+- semantic, crawlable content for SEO and GEO
+- lightweight motion with reduced-motion support
+- strongly typed content updates
+- CI that catches content, metadata, rendering, and build regressions before deploy
 
-- static SvelteKit websites
-- animation-heavy landing pages and microsites
-- local development in VS Code Dev Containers
-- publishing to GitHub Pages
-- beginner-friendly workshop use
-
-This template is not intended for:
+This repository is not intended for:
 
 - server-side hosting
-- long-running backend services
-- production Docker deployment
+- backend APIs
+- form processing on the server
+- production Docker hosting
 
-## Dev Container Design
+## Content Validation Design
 
-The Dev Container is intended to give students a consistent development environment across operating systems.
+Portfolio content is validated with Zod before it is rendered.
 
-The container should:
+- [src/lib/content/portfolio.ts](/workspaces/my-portfolio/src/lib/content/portfolio.ts) is the editable source of truth.
+- [src/lib/content/portfolio-schema.ts](/workspaces/my-portfolio/src/lib/content/portfolio-schema.ts) defines the required structure.
+- SEO metadata, structured data, `robots.txt`, and `sitemap.xml` all depend on the validated content object.
 
-- build from the root `Dockerfile`
-- use the `dev` target
-- run as the `node` user
-- install dependencies with `npm install`
-- start the local dev server automatically
-- forward the SvelteKit development port in VS Code
+This means missing fields, malformed URLs, or incomplete SEO settings fail during tests or builds instead of slipping into production.
 
-The Dev Container should not manually mount the host `.gitconfig` file.
+## SEO And GEO Implementation Notes
 
-VS Code Dev Containers already provide built-in support for reusing local Git configuration and credentials inside the container.
+- [src/lib/seo.ts](/workspaces/my-portfolio/src/lib/seo.ts) centralizes canonical URL handling, metadata, and JSON-LD generation.
+- [src/routes/+layout.svelte](/workspaces/my-portfolio/src/routes/+layout.svelte) applies the global metadata tags.
+- [src/routes/robots.txt/+server.ts](/workspaces/my-portfolio/src/routes/robots.txt/+server.ts) and [src/routes/sitemap.xml/+server.ts](/workspaces/my-portfolio/src/routes/sitemap.xml/+server.ts) generate crawl files at build time.
+- GEO-oriented copy is intentionally placed in readable sections such as project summaries and FAQ content so both people and AI-assisted search systems can interpret the page reliably.
 
 ## GSAP Integration
 
-GSAP is installed as a regular runtime dependency so local development, CI, and GitHub Pages builds all use the same package graph.
-
-For Svelte components, this template exposes a small helper from `$lib`:
+GSAP is installed as a runtime dependency and wrapped in a small helper:
 
 ```ts
 import { withGsapContext } from '$lib';
@@ -66,71 +65,43 @@ The helper:
 - scopes selectors to the current component root
 - reverts the GSAP context automatically when the component unmounts
 
-The starter page in `src/routes/+page.svelte` demonstrates the recommended pattern, and `.vscode/gsap.code-snippets` adds a `gsap-svelte` snippet for quick authoring in VS Code.
+## Validation And Testing
+
+Expected local validation flow:
+
+```sh
+npm run check
+npm run test:unit
+npm run build
+```
+
+Playwright smoke tests require Chromium:
+
+```sh
+npx playwright install chromium
+npm run test:e2e
+```
 
 ## Windows Host File Watching
 
-When the Dev Container runs on a Windows host, the project files live on the Windows filesystem and are bind-mounted into the Linux container. In this configuration, the Linux kernel does not receive inotify events for changes made from the Windows side, so Vite's default file watcher misses them. The dev server keeps serving stale output until it is restarted.
+When the Dev Container runs on a Windows host, the project files are bind-mounted from Windows into Linux. Linux does not receive the same file change notifications in that setup, so Vite may miss updates unless polling is enabled.
 
-Checking `process.platform` inside the container is not sufficient — it always reports `linux` regardless of the host OS.
-
-To detect a Windows host, this template uses VS Code's local environment variable expansion to pass the host's `OS` environment variable into the container:
-
-```json
-"remoteEnv": { "HOST_OS": "${localEnv:OS}" }
-```
-
-On Windows, `OS` is set to `Windows_NT` by the operating system. On macOS and Linux hosts the variable is unset, so `HOST_OS` will be empty inside the container.
-
-`vite.config.ts` reads this variable and enables polling only when needed:
+This repository detects a Windows host through `HOST_OS` and enables polling only when needed:
 
 ```ts
 const usePolling = process.env.HOST_OS === 'Windows_NT';
-// ...
-watch: usePolling ? { usePolling: true, interval: 100 } : undefined
+watch: usePolling ? { usePolling: true, interval: 100 } : undefined;
 ```
 
-This keeps the default, efficient inotify-based watching on macOS and Linux hosts while enabling polling only for Windows users who need it.
+## Dev Container Expectations
 
-## Required Dev Container Configuration
+The Dev Container should:
 
-Your `.devcontainer/devcontainer.json` should follow this pattern:
+- build from the root `Dockerfile`
+- use the `dev` target
+- run as the `node` user
+- install dependencies with `npm install`
+- start the local dev server automatically
+- forward the SvelteKit development port in VS Code
 
-```json
-{
-  "name": "SvelteKit Template Dev Container",
-  "build": {
-    "dockerfile": "../Dockerfile",
-    "target": "dev"
-  },
-  "remoteUser": "node",
-  "remoteEnv": {
-    "HOST_OS": "${localEnv:OS}"
-  },
-  "updateContentCommand": "npm install",
-  "postStartCommand": "bash .devcontainer/scripts/start-dev-server.sh",
-  "postAttachCommand": "bash .devcontainer/scripts/start-dev-server.sh",
-  "waitFor": "postStartCommand",
-  "forwardPorts": [5173],
-  "portsAttributes": {
-    "5173": {
-      "label": "SvelteKit dev server",
-      "onAutoForward": "openBrowser",
-      "requireLocalPort": false
-    },
-    "5174-5190": {
-      "label": "SvelteKit dev server",
-      "onAutoForward": "openBrowser",
-      "requireLocalPort": false
-    }
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "svelte.svelte-vscode",
-        "bradlc.vscode-tailwindcss",
-        "ms-vscode-remote.remote-containers"
-      ]
-    }
-  }
-}
+VS Code Dev Containers already handle Git configuration reuse, so there is no need to mount `.gitconfig` manually.

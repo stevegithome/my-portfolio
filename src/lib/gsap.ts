@@ -3,9 +3,11 @@ import { gsap } from 'gsap';
 export { gsap };
 
 export function motionAllowed() {
-	return typeof window !== 'undefined'
-		? !window.matchMedia('(prefers-reduced-motion: reduce)').matches
-		: false;
+	if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+		return false;
+	}
+
+	return !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
 export function withGsapContext(scope: Element, setup: (instance: typeof gsap) => void) {
