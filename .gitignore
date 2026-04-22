@@ -23,6 +23,9 @@ pnpm-debug.log*
 !.env.example
 !.env.test
 
+# Personal documents
+Resume_SGarza_Intro.docx
+
 # Caches
 .cache/
 .eslintcache
