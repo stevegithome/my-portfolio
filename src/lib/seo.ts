@@ -34,7 +34,6 @@ export function buildStructuredData(content: PortfolioContent) {
 			jobTitle: content.site.roleLabel,
 			description: content.seo.description,
 			url: websiteUrl,
-			email: content.contact.email,
 			address: {
 				'@type': 'PostalAddress',
 				addressCountry: 'US'

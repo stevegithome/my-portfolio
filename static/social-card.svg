@@ -4,9 +4,9 @@
   <circle cx="964" cy="146" r="78" fill="#D17B44" fill-opacity="0.18"/>
   <circle cx="1052" cy="460" r="124" fill="#D17B44" fill-opacity="0.12"/>
   <text x="112" y="190" fill="#99512A" font-family="Manrope, sans-serif" font-size="28" font-weight="700" letter-spacing="7.8">PORTFOLIO</text>
-  <text x="112" y="306" fill="#1F1B18" font-family="Fraunces, Georgia, serif" font-size="82" font-weight="700">Your Name</text>
-  <text x="112" y="382" fill="#1F1B18" font-family="Manrope, sans-serif" font-size="34" font-weight="600">Multidisciplinary builder for thoughtful digital products</text>
-  <text x="112" y="462" fill="#5D544D" font-family="Manrope, sans-serif" font-size="28">Product thinking, interface craft, and frontend delivery in one portfolio.</text>
+  <text x="112" y="306" fill="#1F1B18" font-family="Fraunces, Georgia, serif" font-size="82" font-weight="700">Steve Garza</text>
+  <text x="112" y="382" fill="#1F1B18" font-family="Manrope, sans-serif" font-size="34" font-weight="600">Growth and lifecycle leader</text>
+  <text x="112" y="462" fill="#5D544D" font-family="Manrope, sans-serif" font-size="28">Lifecycle, retention, experimentation, and GTM operating cadence.</text>
   <defs>
     <linearGradient id="paint0_linear" x1="114" y1="96" x2="1064" y2="540" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFFDFC"/>

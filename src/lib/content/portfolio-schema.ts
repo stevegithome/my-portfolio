@@ -76,7 +76,6 @@ export const portfolioSchema = z.object({
 	projects: z.array(projectSchema).min(3),
 	experience: z.array(experienceSchema).min(2),
 	contact: z.object({
-		email: z.string().email(),
 		availabilityNote: z.string().min(1),
 		links: z.array(richLinkSchema).min(2)
 	})

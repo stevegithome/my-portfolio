@@ -179,8 +179,8 @@
 		<section id="projects" class="space-y-10">
 			<SectionHeading
 				eyebrow="Selected Work"
-				title="A few projects that show how I connect clarity, craft, and delivery."
-				copy="Each project is written to answer the questions hiring teams usually care about: the problem, the role I played, the decisions I made, and the outcome the team could build on."
+				title="A few examples of how I turn growth work into clearer operating systems."
+				copy="Each project is written at a deliberately high level: the problem pattern, the role I played, and the kind of decision system the team could build on."
 			/>
 
 			<div class="space-y-8">
@@ -193,7 +193,7 @@
 		<section id="about" class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.8fr)] lg:items-start">
 			<SectionHeading
 				eyebrow="About"
-				title="I like making difficult work feel easier to understand and easier to ship."
+				title="I like making complex growth work easier to understand and easier to act on."
 				copy={portfolio.about.narrative}
 			/>
 
@@ -231,7 +231,7 @@
 		<section id="experience" class="space-y-10">
 			<SectionHeading
 				eyebrow="Experience"
-				title="The through-line in my work is creating confidence for teams and clarity for users."
+				title="The through-line in my work is creating confidence for teams making growth decisions."
 				copy={portfolio.geo.summaryVariants[1]}
 			/>
 
@@ -270,17 +270,11 @@
 						Contact
 					</p>
 					<h2 class="font-display max-w-2xl text-4xl leading-tight text-balance sm:text-5xl">
-						If your team needs someone who can shape the story and ship the interface, let’s talk.
+						If your team needs clearer growth decisions and stronger lifecycle systems, let’s talk.
 					</h2>
 					<p class="max-w-2xl text-base leading-8 text-[var(--color-muted)] sm:text-lg">
 						{portfolio.contact.availabilityNote}
 					</p>
-					<a
-						class="text-lg font-semibold text-[var(--color-ink)] underline decoration-[var(--color-accent)] underline-offset-6"
-						href={`mailto:${portfolio.contact.email}`}
-					>
-						{portfolio.contact.email}
-					</a>
 				</div>
 
 				<div class="space-y-4">
@@ -292,8 +286,8 @@
 									: 'border border-[var(--color-border)] bg-white/86 text-[var(--color-ink)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent-strong)]'
 							}`}
 							href={link.url}
-							target={link.url.startsWith('mailto:') ? undefined : '_blank'}
-							rel={link.url.startsWith('mailto:') ? undefined : 'noreferrer'}
+							target="_blank"
+							rel="noreferrer"
 						>
 							<span>{link.label}</span>
 							<span aria-hidden="true">→</span>

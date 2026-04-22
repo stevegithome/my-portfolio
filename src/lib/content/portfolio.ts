@@ -2,185 +2,188 @@ import { portfolioSchema } from './portfolio-schema';
 
 const portfolioContent = {
 	site: {
-		name: 'Your Name',
-		roleLabel: 'Multidisciplinary builder',
+		name: 'Steve Garza',
+		roleLabel: 'Growth and lifecycle leader',
 		location: 'Based in the United States',
-		availability: 'Open to senior product, design, and frontend opportunities',
+		availability: 'Open to growth, lifecycle, monetization, retention, and GTM strategy opportunities',
 		intro:
-			'I design, prototype, and ship digital experiences that help teams move from ambiguity to something useful in the hands of real people.',
-		tagline: 'Calm execution, sharp product thinking, and work that reads clearly at a glance.',
+			'I build measurement-led growth systems for lifecycle, monetization, retention, and go-to-market teams.',
+		tagline:
+			'My work connects experimentation, KPI governance, segmentation, and cross-functional operating cadence so teams can make clearer growth decisions without losing customer trust.',
 		primaryCtas: {
-			work: 'View Projects',
+			work: 'View Growth Work',
 			contact: 'Start a Conversation'
 		},
 		socialLinks: [
-			{ label: 'GitHub', url: 'https://github.com/your-github' },
-			{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/your-linkedin/' },
-			{ label: 'Resume', url: 'https://your-domain.example/resume.pdf' }
+			{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/smgarza/' },
+			{ label: 'Portfolio', url: 'https://stevegithome.github.io/my-portfolio/' }
 		]
 	},
 	seo: {
-		title: 'Your Name | Multidisciplinary Builder',
+		title: 'Steve Garza | Growth and Lifecycle Leader',
 		description:
-			'Portfolio for Your Name, a multidisciplinary builder creating thoughtful digital products with strong execution across product, design, and frontend delivery.',
-		canonicalUrl: 'https://your-domain.example/',
+			'Portfolio for Steve Garza, a growth and lifecycle leader focused on monetization, retention, experimentation, KPI governance, segmentation, and GTM operating cadence.',
+		canonicalUrl: 'https://stevegithome.github.io/my-portfolio/',
 		socialImage: '/social-card.svg',
 		robots: 'index,follow,max-image-preview:large'
 	},
 	geo: {
 		topicPhrases: [
-			'multidisciplinary builder portfolio',
-			'product-minded frontend leader',
-			'designer who ships production code',
-			'portfolio for hiring managers evaluating execution'
+			'growth and lifecycle leader portfolio',
+			'monetization and retention strategy',
+			'experimentation and KPI governance',
+			'GTM operating cadence for growth teams'
 		],
 		expertiseLabels: [
-			'Product strategy',
-			'Frontend architecture',
-			'Design systems',
-			'Prototyping',
-			'Content design'
+			'Lifecycle strategy',
+			'Monetization and retention',
+			'Experimentation strategy',
+			'KPI governance',
+			'Segmentation and personalization',
+			'GTM operating cadence'
 		],
 		summaryVariants: [
-			'I help teams simplify complex product ideas into interfaces that feel clear, polished, and ready to ship.',
-			'My work sits at the intersection of product thinking, visual craft, and frontend implementation so ideas survive contact with production.'
+			'I help teams turn complex lifecycle and performance signals into practical growth decisions.',
+			'My work sits at the intersection of GTM strategy, lifecycle operations, experimentation, analytics partnership, and executive-ready communication.'
 		],
 		faq: [
 			{
 				question: 'What kind of problems do I solve best?',
 				answer:
-					'I do my best work when a team needs someone who can shape direction, make decisions visible in the UI, and keep momentum high through implementation.'
+					'I do my best work when a team needs growth to become an operating system: clear priorities, useful measurement, disciplined experimentation, and decisions people can act on.'
 			},
 			{
 				question: 'How do I work with teams?',
 				answer:
-					'I tend to bring calm structure: clear tradeoffs, concise communication, and a bias toward shipping something tangible early so the team can react to the real thing.'
+					'I bring calm structure, analytical judgment, and communication that works across Product, Engineering, Analytics, Finance, Legal, Marketing Ops, and leadership audiences.'
 			},
 			{
 				question: 'What should a hiring team know quickly?',
 				answer:
-					'I care about craft, but I also care about usefulness. The goal is not just a nice interface, it is a product decision executed clearly enough that people trust it.'
+					'My background spans Adobe, LinkedIn, Lynda.com, and Rakuten, but this portfolio keeps the work intentionally high level so it reflects capability without exposing sensitive company details.'
 			}
 		]
 	},
 	about: {
 		narrative:
-			'I like working where strategy and execution overlap. That usually means translating messy product conversations into prototypes, systems, and shipped experiences that other people can build on with confidence.',
+			'I like working where growth strategy, lifecycle systems, and measurement meet. That often means helping teams size opportunities, create shared operating rhythms, and turn complicated performance signals into decisions that respect both business goals and customer trust.',
 		principles: [
-			'Make the core story obvious within the first screen.',
-			'Use motion and visual polish to support comprehension, not distract from it.',
-			'Prefer systems that make future edits easier, faster, and safer.'
+			'Use measurement to improve judgment, not to bury teams in dashboards.',
+			'Build repeatable growth systems before chasing isolated wins.',
+			'Protect customer trust while improving monetization and retention.'
 		],
 		personality: [
 			{
-				label: 'Calm under pressure',
-				detail: 'I reduce noise, name tradeoffs, and keep a team moving even when the path is still taking shape.'
+				label: 'Measurement-led and practical',
+				detail:
+					'I look for the signal in complex performance information and translate it into clear next steps for growth teams.'
 			},
 			{
-				label: 'Warm and collaborative',
-				detail: 'I want the people around me to feel clarity, momentum, and trust in the process.'
+				label: 'Clear across levels',
+				detail:
+					'I care about making strategy and analysis understandable whether I am speaking with executives, operators, or cross-functional partners.'
 			},
 			{
-				label: 'High standards, low drama',
-				detail: 'I care about quality and details, but I try to make rigor feel supportive rather than heavy.'
+				label: 'Customer-centered growth',
+				detail:
+					'I like growth work that scales outcomes while keeping value, access, and customer experience in view.'
 			}
 		]
 	},
 	projects: [
 		{
-			slug: 'signal-ops',
-			title: 'Signal Ops Dashboard',
+			slug: 'gtm-operating-cadence',
+			title: 'GTM Operating Cadence and KPI Governance',
 			summary:
-				'Designed and built a decision-focused operations dashboard that helped an internal team move faster during incident review and weekly planning.',
-			role: 'Product design, frontend architecture, content model',
+				'Created operating rhythms that helped growth teams connect priorities, measurement, initiative sizing, and leadership decisions.',
+			role: 'GTM strategy, KPI governance, cross-functional alignment',
 			context:
-				'A growing team had fragmented reporting, too many competing metrics, and no shared story for what needed attention first.',
+				'Growth work gets harder to steer when product, marketing, analytics, finance, legal, and engineering teams are looking at different signals or using different decision rhythms.',
 			impact: [
-				'Reduced the number of screens needed for a weekly review from five down to one connected workflow.',
-				'Created a modular component system so new metrics and alerts could be added without redesigning the page.'
+				'Established clearer connections between growth priorities, KPI governance, initiative sizing, and leadership readouts.',
+				'Helped teams move from scattered status updates toward a shared operating cadence for decisions and follow-through.'
 			],
-			stack: ['SvelteKit', 'TypeScript', 'Tailwind CSS', 'Analytics integration'],
+			stack: ['GTM cadence', 'KPI governance', 'Initiative sizing', 'Executive communication'],
 			links: [
-				{ label: 'Case Study', url: 'https://your-domain.example/work/signal-ops' },
-				{ label: 'Source', url: 'https://github.com/your-github/signal-ops' }
+				{ label: 'Discuss this work', url: 'https://www.linkedin.com/in/smgarza/' }
 			],
 			featured: true
 		},
 		{
-			slug: 'relay-design-system',
-			title: 'Relay Design System',
+			slug: 'lifecycle-funnel-intelligence',
+			title: 'Lifecycle Operations and Funnel Intelligence',
 			summary:
-				'Turned scattered product patterns into a shared design language with coded components, practical documentation, and rollout guidance.',
-			role: 'System design, component authoring, documentation',
+				'Built lifecycle and funnel reporting practices that helped marketing teams understand where onboarding, acquisition, and retention work needed attention.',
+			role: 'Lifecycle strategy, marketing operations, performance interpretation',
 			context:
-				'Multiple product surfaces were evolving independently, which slowed delivery and made the experience feel inconsistent across teams.',
+				'Lifecycle teams need operating discipline around audiences, journeys, channel handoffs, reporting, and decision rules so programs can scale without becoming opaque.',
 			impact: [
-				'Introduced reusable primitives that tightened visual consistency while shortening implementation time for new features.',
-				'Paired written guidance with production-ready examples so product, design, and engineering could align around the same source of truth.'
+				'Translated funnel, CRM, and campaign signals into reporting that product marketing and operations teams could use.',
+				'Supported lifecycle transitions and onboarding work with clearer journey rules, governance, and performance visibility.'
 			],
-			stack: ['Svelte', 'Story-driven documentation', 'Design tokens', 'Accessibility testing'],
+			stack: ['Lifecycle operations', 'Funnel analysis', 'CRM data', 'Onboarding governance'],
 			links: [
-				{ label: 'Overview', url: 'https://your-domain.example/work/relay-design-system' },
-				{ label: 'Repository', url: 'https://github.com/your-github/relay-design-system' }
+				{ label: 'Discuss this work', url: 'https://www.linkedin.com/in/smgarza/' }
 			],
 			featured: true
 		},
 		{
-			slug: 'northstar-launch',
-			title: 'Northstar Launch Site',
+			slug: 'segmentation-personalization-strategy',
+			title: 'Segmentation and Personalization Strategy',
 			summary:
-				'Created a narrative-driven launch experience that introduced a new product direction with clear messaging, motion, and measurable conversion points.',
-			role: 'Creative direction, interaction design, frontend build',
+				'Used segmentation, cohort thinking, and personalization strategy to help ecommerce and subscription teams decide which customer experiences to test next.',
+			role: 'Segmentation strategy, personalization, test-and-learn systems',
 			context:
-				'A new initiative needed to feel credible to leadership and compelling to prospective users without relying on dense technical copy.',
+				'Personalization can become noisy when teams do not have a clear view of customer behavior, product affinity, lifecycle stage, and the measurement needed to learn responsibly.',
 			impact: [
-				'Built a responsive storytelling page that clarified positioning, product value, and next-step actions within a single flow.',
-				'Used lightweight motion and structured content blocks so the page stayed memorable without sacrificing performance.'
+				'Identified useful behavioral patterns and audience differences that could shape lifecycle, merchandising, and retention testing.',
+				'Helped teams connect segmentation ideas to operating rhythms, measurement plans, and customer-centered decision making.'
 			],
-			stack: ['SvelteKit', 'GSAP', 'Content strategy', 'Performance tuning'],
+			stack: ['Segmentation', 'Personalization', 'Cohort analysis', 'Experimentation strategy'],
 			links: [
-				{ label: 'Launch Story', url: 'https://your-domain.example/work/northstar-launch' },
-				{ label: 'Code', url: 'https://github.com/your-github/northstar-launch' }
+				{ label: 'Discuss this work', url: 'https://www.linkedin.com/in/smgarza/' }
 			],
 			featured: true
 		}
 	],
 	experience: [
 		{
-			title: 'Senior Product Builder',
-			organization: 'Independent and embedded team work',
-			period: 'Recent focus',
+			title: 'Growth and Lifecycle Leadership',
+			organization: 'Adobe, LinkedIn, Lynda.com, and Rakuten',
+			period: 'Current focus',
 			summary:
-				'Partnered with teams that needed someone to connect product direction, interface craft, and production implementation.',
+				'Builds the systems that connect lifecycle strategy, monetization and retention priorities, experimentation, analytics partnership, and GTM decision cadence.',
 			bullets: [
-				'Scoped ambiguous initiatives into clear user flows, interface systems, and delivery milestones.',
-				'Worked across design and engineering boundaries without losing sight of the story a hiring manager or user needs to understand.'
+				'Partners across Product, Engineering, Analytics, Finance, Legal, Marketing Ops, and leadership to make growth work easier to prioritize and execute.',
+				'Turns complex performance signals into shared decisions without publishing sensitive company outcomes or internal details.'
 			]
 		},
 		{
-			title: 'Frontend and Design Systems Lead',
-			organization: 'Product platform environments',
-			period: 'Earlier chapter',
+			title: 'Lifecycle Operations and Segmentation Foundation',
+			organization: 'CRM, ecommerce, subscription, and professional learning environments',
+			period: 'Career foundation',
 			summary:
-				'Focused on reusable systems, maintainable UI architecture, and patterns that improved quality across multiple surfaces.',
+				'Grounded in CRM, email operations, segmentation, personalization, funnel analysis, and performance reporting across B2B, B2C, and global ecommerce contexts.',
 			bullets: [
-				'Built component foundations that made future features easier to ship with consistent accessibility and visual quality.',
-				'Improved team confidence by documenting decisions clearly and turning abstract design guidance into usable implementation patterns.'
+				'Uses segmentation and personalization as strategic inputs to lifecycle systems, not just campaign tactics.',
+				'Communicates analytical findings clearly across levels so teams can act with more confidence.'
 			]
 		}
 	],
 	contact: {
-		email: 'hello@your-domain.example',
 		availabilityNote:
-			'I’m most useful on teams that value thoughtful product decisions, clear communication, and strong delivery craft.',
+			'I’m most useful to teams that want growth to be more systematic: clearer priorities, better measurement, stronger lifecycle systems, and disciplined execution.',
 		links: [
-			{ label: 'Email Me', url: 'mailto:hello@your-domain.example', emphasis: 'primary' },
 			{
 				label: 'View LinkedIn',
-				url: 'https://www.linkedin.com/in/your-linkedin/',
-				emphasis: 'secondary'
+				url: 'https://www.linkedin.com/in/smgarza/',
+				emphasis: 'primary'
 			},
-			{ label: 'Browse GitHub', url: 'https://github.com/your-github', emphasis: 'secondary' }
+			{
+				label: 'View Portfolio',
+				url: 'https://stevegithome.github.io/my-portfolio/',
+				emphasis: 'secondary'
+			}
 		]
 	}
 };
