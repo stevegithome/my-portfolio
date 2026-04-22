@@ -4,13 +4,13 @@ test('homepage smoke test', async ({ page }) => {
 	await page.goto('/');
 
 	await expect(page).toHaveTitle(/Steve Garza/);
-	await expect(page.getByRole('heading', { name: /clearer operating systems/i })).toBeVisible();
-	await expect(page.getByRole('heading', { name: /complex growth work/i })).toBeVisible();
+	await expect(page.getByRole('heading', { name: /Operating systems for monetization/i })).toBeVisible();
+	await expect(page.getByRole('heading', { name: /Clearer decisions, stronger systems/i })).toBeVisible();
 	await expect(
-		page.getByRole('heading', { name: /confidence for teams making growth decisions/i })
+		page.getByRole('heading', { name: /career through-line of growth/i })
 	).toBeVisible();
-	await expect(page.getByRole('heading', { name: /stronger lifecycle systems/i })).toBeVisible();
-	await expect(page.getByRole('link', { name: /View Growth Work/i })).toHaveAttribute(
+	await expect(page.getByRole('heading', { name: /Direct answers for hiring teams/i })).toBeVisible();
+	await expect(page.getByRole('link', { name: /View Work/i })).toHaveAttribute(
 		'href',
 		'#projects'
 	);
