@@ -8,6 +8,6 @@ describe('sitemap.xml', () => {
 		const body = await response.text();
 
 		expect(response.headers.get('content-type')).toContain('application/xml');
-		expect(body).toContain('<loc>https://your-domain.example/</loc>');
+		expect(body).toContain('<loc>https://stevegithome.github.io/my-portfolio/</loc>');
 	});
 });

@@ -9,6 +9,6 @@ describe('robots.txt', () => {
 
 		expect(response.headers.get('content-type')).toContain('text/plain');
 		expect(body).toContain('User-agent: *');
-		expect(body).toContain('https://your-domain.example/sitemap.xml');
+		expect(body).toContain('https://stevegithome.github.io/my-portfolio/sitemap.xml');
 	});
 });
