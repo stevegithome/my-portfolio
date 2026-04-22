@@ -3,15 +3,14 @@ import { portfolioSchema } from './portfolio-schema';
 const portfolioContent = {
 	site: {
 		name: 'Steve Garza',
-		roleLabel: 'Growth and lifecycle leader',
-		location: 'Based in the United States',
-		availability: 'Open to growth, lifecycle, monetization, retention, and GTM strategy opportunities',
-		intro:
-			'I build measurement-led growth systems for lifecycle, monetization, retention, and go-to-market teams.',
+		roleLabel: 'Growth and Product Marketing Leader',
+		location: 'San Francisco, California, United States',
+		availability: 'Open to growth, product marketing, monetization, lifecycle, GTM, PLG, AI, and scale opportunities',
+		intro: 'Steve Garza',
 		tagline:
-			'My work connects experimentation, KPI governance, segmentation, and cross-functional operating cadence so teams can make clearer growth decisions without losing customer trust.',
+			'Growth and Product Marketing Leader | Monetization, Lifecycle, GTM | PLG + Experimentation | AI | 0→1 & Scale',
 		primaryCtas: {
-			work: 'View Growth Work',
+			work: 'View Work',
 			contact: 'Start a Conversation'
 		},
 		socialLinks: [
@@ -20,31 +19,31 @@ const portfolioContent = {
 		]
 	},
 	seo: {
-		title: 'Steve Garza | Growth and Lifecycle Leader',
+		title: 'Steve Garza | Growth and Product Marketing Leader',
 		description:
-			'Portfolio for Steve Garza, a growth and lifecycle leader focused on monetization, retention, experimentation, KPI governance, segmentation, and GTM operating cadence.',
+			'Portfolio for Steve Garza, a growth and product marketing leader focused on monetization, lifecycle, GTM, PLG, experimentation, AI, 0→1, and scale.',
 		canonicalUrl: 'https://stevegithome.github.io/my-portfolio/',
 		socialImage: '/social-card.svg',
 		robots: 'index,follow,max-image-preview:large'
 	},
 	geo: {
 		topicPhrases: [
-			'growth and lifecycle leader portfolio',
+			'growth and product marketing leader portfolio',
 			'monetization and retention strategy',
 			'experimentation and KPI governance',
-			'GTM operating cadence for growth teams'
+			'GTM and PLG operating cadence for growth teams'
 		],
 		expertiseLabels: [
-			'Lifecycle strategy',
-			'Monetization and retention',
-			'Experimentation strategy',
-			'KPI governance',
-			'Segmentation and personalization',
-			'GTM operating cadence'
+			'Monetization',
+			'Lifecycle',
+			'Experimentation',
+			'GTM',
+			'AI-enabled growth',
+			'0→1 and scale'
 		],
 		summaryVariants: [
-			'I help teams turn complex lifecycle and performance signals into practical growth decisions.',
-			'My work sits at the intersection of GTM strategy, lifecycle operations, experimentation, analytics partnership, and executive-ready communication.'
+			'I help teams turn lifecycle, product, and performance signals into practical growth decisions.',
+			'My work sits at the intersection of product marketing, GTM strategy, lifecycle operations, experimentation, analytics partnership, and executive-ready communication.'
 		],
 		faq: [
 			{
@@ -66,7 +65,7 @@ const portfolioContent = {
 	},
 	about: {
 		narrative:
-			'I like working where growth strategy, lifecycle systems, and measurement meet. That often means helping teams size opportunities, create shared operating rhythms, and turn complicated performance signals into decisions that respect both business goals and customer trust.',
+			'I work where growth strategy, product marketing, lifecycle systems, and measurement meet. That often means helping teams size opportunities, create shared operating rhythms, and turn complicated performance signals into decisions that respect both business goals and customer trust.',
 		principles: [
 			'Use measurement to improve judgment, not to bury teams in dashboards.',
 			'Build repeatable growth systems before chasing isolated wins.',

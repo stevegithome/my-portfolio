@@ -16,7 +16,7 @@
 	<meta name="keywords" content={metadata.keywords} />
 	<meta name="robots" content={metadata.robots} />
 	<meta name="author" content={portfolio.site.name} />
-	<meta name="theme-color" content="#f3ede5" />
+	<meta name="theme-color" content="#f4f6f8" />
 	<link rel="canonical" href={metadata.canonical} />
 	<link rel="icon" href={faviconHref} />
 	<meta property="og:title" content={metadata.title} />

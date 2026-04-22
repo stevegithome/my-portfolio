@@ -1,16 +1,23 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#F3EDE5"/>
-  <rect x="40" y="40" width="1120" height="550" rx="36" fill="url(#paint0_linear)"/>
-  <circle cx="964" cy="146" r="78" fill="#D17B44" fill-opacity="0.18"/>
-  <circle cx="1052" cy="460" r="124" fill="#D17B44" fill-opacity="0.12"/>
-  <text x="112" y="190" fill="#99512A" font-family="Manrope, sans-serif" font-size="28" font-weight="700" letter-spacing="7.8">PORTFOLIO</text>
-  <text x="112" y="306" fill="#1F1B18" font-family="Fraunces, Georgia, serif" font-size="82" font-weight="700">Steve Garza</text>
-  <text x="112" y="382" fill="#1F1B18" font-family="Manrope, sans-serif" font-size="34" font-weight="600">Growth and lifecycle leader</text>
-  <text x="112" y="462" fill="#5D544D" font-family="Manrope, sans-serif" font-size="28">Lifecycle, retention, experimentation, and GTM operating cadence.</text>
-  <defs>
-    <linearGradient id="paint0_linear" x1="114" y1="96" x2="1064" y2="540" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFDFC"/>
-      <stop offset="1" stop-color="#ECE4DB"/>
-    </linearGradient>
-  </defs>
+  <rect width="1200" height="630" fill="#F4F6F8"/>
+  <rect x="48" y="48" width="1104" height="534" rx="18" fill="#FFFFFF"/>
+  <rect x="48" y="48" width="1104" height="176" rx="18" fill="#061B22"/>
+  <path d="M48 206H1152V224H48V206Z" fill="#FFFFFF" fill-opacity="0.95"/>
+  <rect x="48" y="48" width="276" height="176" fill="#071B22"/>
+  <rect x="324" y="48" width="188" height="176" fill="#0B302D"/>
+  <rect x="512" y="48" width="264" height="176" fill="#09252B"/>
+  <rect x="776" y="48" width="188" height="176" fill="#0B302D"/>
+  <rect x="964" y="48" width="188" height="176" fill="#F7F0DA"/>
+  <path d="M48 184H324V224H48V184Z" fill="#CF7E3E"/>
+  <circle cx="386" cy="112" r="44" fill="#F4C6DC"/>
+  <circle cx="486" cy="136" r="38" fill="#F2D36F"/>
+  <rect x="642" y="84" width="34" height="118" rx="17" fill="#2F8FAC"/>
+  <path d="M760 88C814 88 858 132 858 186H662C662 132 706 88 760 88Z" fill="#F6D37A"/>
+  <path d="M972 88H1052V208H972V88Z" fill="#24845F"/>
+  <rect x="102" y="168" width="132" height="132" rx="66" fill="#EEF3F8" stroke="#FFFFFF" stroke-width="12"/>
+  <text x="168" y="248" text-anchor="middle" fill="#004182" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="48" font-weight="800">SG</text>
+  <text x="102" y="374" fill="#0A66C2" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="26" font-weight="700">Growth and Product Marketing Leader</text>
+  <text x="102" y="462" fill="#1D2226" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="76" font-weight="800">Steve Garza</text>
+  <text x="102" y="524" fill="#5F6B76" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="28" font-weight="500">Monetization, Lifecycle, GTM, PLG, Experimentation, AI, 0→1 &amp; Scale</text>
+  <rect x="48.5" y="48.5" width="1103" height="533" rx="17.5" stroke="#0F172A" stroke-opacity="0.1"/>
 </svg>
